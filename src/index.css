@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-gray-900 bg-gray-50 dark:bg-gray-900 dark:text-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight dark:text-white;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gradient-to-r from-rose-500 to-purple-600 hover:from-rose-600 hover:to-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-rose-500 transition-all duration-200 shadow-lg hover:shadow-xl transform hover:scale-105 dark:focus:ring-offset-gray-900;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-rose-600 bg-white hover:bg-rose-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-rose-500 transition-all duration-200 transform hover:scale-105 dark:bg-gray-800 dark:text-rose-400 dark:hover:bg-gray-700 dark:focus:ring-offset-gray-900;
+  }
+
+  .section-title {
+    @apply text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl dark:text-white;
+  }
+
+  .section-subtitle {
+    @apply mt-3 max-w-md mx-auto text-base text-gray-500 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl dark:text-gray-400;
+  }
+
+  .card {
+    @apply p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:bg-gray-800 dark:border-gray-700;
+  }
+
+  .gradient-bg {
+    @apply bg-gradient-to-br from-rose-500 to-purple-600;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-rose-500 to-purple-600 bg-clip-text text-transparent;
+  }
+
+  .nav-link {
+    @apply text-gray-600 hover:text-rose-600 transition-colors dark:text-gray-400 dark:hover:text-rose-400;
+  }
+
+  .nav-link-active {
+    @apply text-rose-600 font-medium dark:text-rose-400;
+  }
+
+  .quick-action-card {
+    @apply flex items-center p-4 bg-white rounded-lg border border-gray-200 hover:border-rose-200 hover:bg-rose-50 transition-all duration-300 dark:bg-gray-800 dark:border-gray-700 dark:hover:border-rose-700 dark:hover:bg-gray-700;
+  }
+
+  .quick-action-icon {
+    @apply h-10 w-10 rounded-lg bg-gradient-to-r from-rose-500 to-purple-600 text-white flex items-center justify-center transition-transform duration-300;
+  }
+}
+
+.bg-grid-pattern {
+  background-image: linear-gradient(to right, rgba(0,0,0,0.1) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(0,0,0,0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.dark .bg-grid-pattern {
+  background-image: linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px);
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+. <boltAction type="file" filePath="src/index.css">animate-slide-up {
+  animation: slideUp 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
